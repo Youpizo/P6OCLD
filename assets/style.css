@@ -125,6 +125,33 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+/* FILTRE ET GALLERIE */
+
+.filters {
+		display: flex;
+		justify-content: center;
+		margin: 40px 0;
+}
+
+.filterbtn {
+	font-family: "Syne";
+	padding: 10px 20px;
+	margin: 0 15px;
+	border: 1px solid #1D6154;
+	border-radius: 25px;
+	color: #1D6154;
+	background-color: white;
+	font-size: 16px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.5s ease;
+  }
+
+.active_btn {
+	color: white;
+	background-color: #1D6154;
+}
 .gallery {
 	width: 100%;
 	display: grid;
@@ -185,4 +212,3 @@ footer nav ul {
 	justify-content: flex-end;
 	margin: 2em
 }
-
