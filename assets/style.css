@@ -129,12 +129,27 @@ li:hover {
 /* FILTRE ET GALLERIE */
 
 .filters {
-		display: flex;
-		justify-content: center;
-		margin: 40px 0;
+	align-items: center;
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	margin-bottom: 60px;
+	margin-top: 20px;
+}
+.filter_unselected {
+	border: 1px solid #1D6154;
+	border-radius: 60px;
+	color: #1D6154;
+	cursor: pointer;
+	font-family: 'Syne', sans-serif;
+	padding: 10px 25px 10px 25px;
+}
+.filter_selected {
+	color: white;
+	background-color: #1D6154;
 }
 
-.filterbtn {
+.button {
 	font-family: "Syne";
 	padding: 10px 20px;
 	margin: 0 15px;
@@ -147,11 +162,6 @@ li:hover {
 	cursor: pointer;
 	transition: all 0.5s ease;
   }
-
-.active_btn {
-	color: white;
-	background-color: #1D6154;
-}
 .gallery {
 	width: 100%;
 	display: grid;
