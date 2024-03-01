@@ -4,9 +4,9 @@
       .then(response => response.json()) //extraction des données OK puis :
       // traitement des données :
       .then(dataWorks => {
-          const gallery = document.querySelector(".gallery");
+          const gallery = document.querySelector(".gallery"); //conteneur
           gallery.innerHTML = ""; //efface le contenu précèdent de la galerie (prévision de la modale)
-          dataWorks.forEach((work) => {
+          dataWorks.forEach((work) => { //boucle de création
               const card = document.createElement("figure");
               const imgCard = document.createElement("img");
               const titleCard = document.createElement("figcaption");
@@ -27,13 +27,13 @@
       .then(response => response.json()) //extraction des données OK puis :
       // traitement des données :
       .then(dataCategories => {
-          const filters = document.querySelector(".filters") 
+          const filters = document.querySelector(".filters"); // conteneur
           const allFilter = document.createElement('p');
-          allFilter.textContent = 'Tous';
+          allFilter.textContent = 'Tous'; // on ajoute le filtre "Tous" en plus la récup des catégorie
           allFilter.classList.add("filter_unselected");
           allFilter.classList.add("filter_selected")
           filters.appendChild(allFilter);
-          dataCategories.forEach((category) => {
+          dataCategories.forEach((category) => { //boucle de création
              const nameFilters = document.createElement("p");
              nameFilters.innerText = category.name;
              nameFilters.id = category.id;
@@ -44,7 +44,7 @@
 //LIAISON : EVENEMENT LORS DU CLICK -> FILTRE L'ID de L'IMAGE ET DE LA CATEGORIE//
           filters.querySelectorAll('p').forEach((filter) => {
               filter.addEventListener("click", function() { //ajout d'un évènement de click 
-                  const id = this.id; //récupération de l'ID de l'élément sur lequel on clique
+                  const id = this.id; //récupération de l'ID de l'élément sur lequel on clique. "this" fais reference à l'élément p
                   document.querySelectorAll('.gallery img').forEach(image => {
                       if (image.getAttribute('category') === id) { //VERIFICATION QUE LIMAGE A LE MEME ID QUE LA CATEGORIE//
                           image.parentElement.style.display = 'block'; //on affiche
@@ -67,9 +67,9 @@
           elements.forEach((element) => {
               element.addEventListener("click", () => {
                   elements.forEach((element) => {
-                      element.classList.remove("filter_selected");
+                      element.classList.remove("filter_selected"); //on enlève sur tous au cas où
                       });
-                      element.classList.add("filter_selected"); 
+                      element.classList.add("filter_selected"); // puis on ajoute au click la classe
               });
           });  
       });
