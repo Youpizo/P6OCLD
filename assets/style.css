@@ -94,10 +94,14 @@ nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
 }
-
-li:hover {
+nav a {
+	color: black;
+	text-decoration: none;
+}
+nav a:hover {
 	color: #B1663C;
 }
+
 #introduction {
 	display: flex;
 	align-items: center;
@@ -174,6 +178,61 @@ li:hover {
 	width: 100%;
 
 }
+
+/*LOGIN ET CONTACT*/
+
+#login {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 580px;
+}
+.loginh2 {
+	margin: 60px;
+}
+
+#loginform {
+	display:flex;
+	flex-direction: column;
+}
+
+#login label {
+	margin: 2em 0 1em 0;
+}
+#login input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	width: 379px;
+}
+#connection {
+	max-width: 179px;
+}
+#login a {
+	color: black;
+	margin-bottom: 30px;
+}
+#error {
+	color: red;
+	margin-top: 15px;
+}
+input[type="submit"]{
+    cursor: pointer;
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+#footer__login {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #contact {
 	width: 50%;
 margin: auto;
@@ -204,17 +263,6 @@ margin: auto;
 #contact textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-}
-
-input[type="submit"]{
-	font-family: 'Syne';
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
-	margin : 2em auto ;
-	width: 180px;
-	text-align: center;
-	border-radius: 60px ;
 }
 
 footer nav ul {
