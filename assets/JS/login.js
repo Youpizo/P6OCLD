@@ -1,23 +1,26 @@
 const formulaire = document.getElementById('loginform');
 
+
+
+//EVENT AU CLICK SUBMIT
 formulaire.addEventListener("submit", async (event) => {
     // Empêche le rechargement de la page
     event.preventDefault();
 
-    // Création des variables concernant le formulaire
+    // VARIABLES FORMULAIRE
     const email = document.querySelector('#email');
     const password = document.querySelector('#password');
     const messageError = document.querySelector('#error');
 
-    // On récupère les valeurs entrées dans email et password
+    // RECUPERATION DE l'EMAIL ET MDP
     const user = {
         email: email.value,
         password: password.value
     }
-    /* Test de récupération des données 
-    console.log(user);
-    */
-    // On soumet le formulaire et on l'envoie à l'API
+    // Test de récupération des données 
+    console.log(user);  
+    
+    // ENVOI FORM A L'API
     try {
         const response = await fetch("http://localhost:5678/api/users/login", {
             method: 'POST',
@@ -25,16 +28,16 @@ formulaire.addEventListener("submit", async (event) => {
                 'Content-Type': 'application/json',
                 'accept': 'application/json'
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(user) //conversion de "user" en JSON
         });
         // Si la réponse est OK (status 200)
         if (response.ok) {
             // On récupère les données
             const data = await response.json();
-            /* On vérifie que les données sont présentes
+            /* On vérifie que les données sont présentes */
                 console.log(data);
-                Les données sont présentes
-            */
+            // Les données sont présentes
+            
             // On récupère le token d'authentification
             const token = data.token;
             // On stocke le token dans le localStorage 
@@ -54,3 +57,5 @@ formulaire.addEventListener("submit", async (event) => {
         console.log("Echec de l'authentification", error);
     }
 });
+
+
