@@ -16,7 +16,7 @@ async function checkUserConnected () {
          // Affichage des éléments : barre d'édition, boutons "modifier"
          const navEdition = document.getElementById('navEdit');
          navEdition.style.display = 'flex';
-         const buttonModify = document.querySelector(".Modify");
+         const buttonModify = document.querySelector(".modify");
          buttonModify.style.display = 'block';
 
          // Les filtres sont masqués
@@ -32,7 +32,7 @@ async function checkUserConnected () {
          const navEdition = document.getElementById('navEdit');
          navEdition.style.display = 'none';
 
-         const buttonModify = document.querySelector(".Modify");
+         const buttonModify = document.querySelector(".modify");
          buttonModify.style.display = 'none';
 
          // Les filtres sont visibles 
