@@ -48,6 +48,7 @@ table {
 }
 /** end reset css**/
 body {
+	background: #FFFEF8;
 	max-width: 1140px;
 	margin:auto;
 	font-family: 'Work Sans' ;
@@ -128,6 +129,12 @@ nav a:hover {
 #portfolio h2 {
 	text-align: center;
 	margin-bottom: 1em;
+}
+
+.PortfolioTitle {
+	align-items: center;
+	display: flex;
+	justify-content: center;
 }
 
 /* FILTRE ET GALLERIE */
@@ -269,4 +276,39 @@ footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
+}
+
+/* EDITION */
+
+#navEdit {
+	align-items: center;
+	background: black;
+	display: none;
+	gap: 21px;
+	height: 59px;
+	justify-content: center;
+}
+
+.Edition {
+	color: white;
+}
+
+.Modify {
+	color: black;
+	cursor: pointer;
+	display: none;
+	margin-top: -25px;
+	padding-left: 31px;
+}
+
+
+/* MODAL */ 
+
+.modalcontainer {
+	display: none;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
 }

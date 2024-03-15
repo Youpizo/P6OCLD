@@ -43,7 +43,7 @@ formulaire.addEventListener("submit", async (event) => {
             // On stocke le token dans le localStorage 
             localStorage.setItem('token', token);
             // On redirige vers la page d'accueil en mode édition
-            window.location.href='index.html'; 
+            window.location.href='index.html';   
         } else {
             // Sinon message d'erreur 
             messageError.textContent = "Erreur dans l’identifiant ou le mot de passe";
@@ -57,5 +57,3 @@ formulaire.addEventListener("submit", async (event) => {
         console.log("Echec de l'authentification", error);
     }
 });
-
-

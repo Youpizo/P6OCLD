@@ -11,13 +11,21 @@
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+	<div id="navEdit">
+		<p class="Edition"><i class="fa-regular fa-pen-to-square"></i> Mode édition</p>
+	</div>
+	<div id="modal" class="modalcontainer">
+
+
+
+	</div>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
 			<li><a href="./index.html">projets</a></li>
 			<li><a href="#contact">contact</a></li>
-			<li><a href="./login.html">login</a></li>
+			<li><a class="loginNav" href="./login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -35,7 +43,10 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<div class="PortfolioTitle">
+			<h2>Mes Projets</h2>
+			<span class="Modify OpenModale"><i class="fa-regular fa-pen-to-square"></i> Modifier</span>
+	    </div>
 		<div class="filters"></div>
 		<div class="gallery"></div>
 	</section>
@@ -63,5 +74,6 @@
 </footer>
 	<script src="./assets/js/api.js"></script>
 	<script src="./assets/js/index.js"></script>
+	<script src="./assets/js/Connexion.js"></script>
 </body>
 </html>
