@@ -21,50 +21,8 @@
 	<div id="navEdit">
 		<p class="edition"><i class="fa-regular fa-pen-to-square"></i> Mode édition</p>
 	</div>
-	<div id="modal" class="modalcontainer">
-			<div class="overlay modalCTA"></div>
-			<div class="modPage1">
-				<span class="closeModal modalCTA">
-					<i class="fa-solid fa-xmark"></i>
-				</span>
-				<h2 class="modalTitle">Galerie photo</h2>
-				<div class="modalPage1_gallery">
-					<!-- Ajout dynamique de la galerie -->
-					<!-- Ajout dynamique des icônes -->
-				</div>
-				<div class="modalPage1_bar"></div>
-				<button class="modalPage1_button">Ajouter une photo</button>
-				<p class="modalPage1_delete">Supprimer la galerie</p>
-			</div>
-			<div class="modPage2">
-				<span class="modReturn">
-					<i class="fa-solid fa-arrow-left"></i>
-				</span>
-				<span class="close__modal modal__trigger">
-					<i class="fa-solid fa-xmark"></i>
-				</span>
-				<h2 class="modalTitle">Ajout photo</h2>
-				<form id="modPage2_form" class="modPage2_form">
-					<span class="modPage2_img">
-						<span class="modPage2_icon">
-							<i class="fa-regular fa-image"></i>
-						</span>
-						<label for="addPhoto" class="modPage2_textaddImg">+ Ajouter photo</label>
-						<input id="addPhoto" class="modPage2_addImg" type="file" accept="image/jpg, image/png">
-						<span class="modPage2_description">jpg, png : 4mo max</span>
-					</span>
-					<label for="photoTitle" class="modPage2_input">Titre</label>
-					<input id="photoTitle" type="text" >
-					<label for="photoCategories">Catégorie</label>
-					<select id="photoCategories">
-						<!-- Catégories ajoutées dynamiquement -->
-					</select>
-					<span id="errorForm"></span>
-					<span class="modalPage2_bar"></span>
-					<input id="validateProject" class="modPage2_validCTA" type="submit" value="Valider">
-				</form>
-			</div>
-		</div>
+	<div id="modale" class="modaleContainer">
+	</div>
 	
 
 
@@ -107,7 +65,7 @@
 	<section id="portfolio">
 		<div class="PortfolioTitle">
 			<h2>Mes Projets</h2>
-			<span class="modify OpenModale"><i class="fa-regular fa-pen-to-square"></i> Modifier</span>
+			<span class="modify openModale"><i class="fa-regular fa-pen-to-square"></i> Modifier</span>
 	    </div>
 		<div class="filters"></div>
 		<div class="gallery"></div>
@@ -137,5 +95,6 @@
 	<script src="./assets/js/api.js"></script>
 	<script src="./assets/js/index.js"></script>
 	<script src="./assets/js/Connexion.js"></script>
+	<script src="./assets/js/modale.js"></script>
 </body>
 </html>
