@@ -8,5 +8,6 @@ async function initWorks() {
     getWorks();
     getCategories();
     checkUserConnected();
+    getWorksModale()
 }
 

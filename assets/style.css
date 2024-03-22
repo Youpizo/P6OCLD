@@ -175,6 +175,7 @@ nav a:hover {
 	cursor: pointer;
 	transition: all 0.5s ease;
   }
+  
 .gallery {
 	width: 100%;
 	display: grid;
@@ -372,24 +373,18 @@ footer nav ul {
 	max-height: 102.57px;
 	max-width: 76.86px;
 }
-.movePhoto {
-	background: black;
-	color: white;
-	padding: 3px;
-	position: absolute;
-	top: 125px;
-	left: 137px;
-}
+
 .deleteButton {
 	background: black;
-	border: none;
+	border-radius: 5px;
 	color: white;
 	cursor: pointer;
 	padding: 2.5px 3px;
 	position: relative;
-	top: -115px;
-	left: 56px;
+	top: -95px;
+	left: 52px;
 }
+
 .modalePage1_bar {
 	border: 1px solid #B3B3B3;
 	max-width: 420px;

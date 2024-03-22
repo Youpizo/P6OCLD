@@ -41,3 +41,51 @@ closeModale.forEach(close => close.addEventListener("click", displayNoneModale))
 function displayNoneModale() {
     modaleContainer.classList.remove("active"); // Ajoute la class active pour afficher la modale
 };
+
+/// ACCESSIBILITE MODALE 2 ///
+
+
+//RECUP DES PHOTOS POUR LA MODALE//
+async function getWorksModale() {
+    fetch("http://localhost:5678/api/works")
+    .then(response => response.json())
+    .then(dataWorksModale => {
+
+        // Sélection de la div qui va contenir les données récupérées via l'API
+        const galleryModale = document.querySelector(".modalePage1_gallery"); 
+        galleryModale.innerHTML = "";
+
+        // Création des travaux via les données récupérées
+        dataWorksModale.forEach((workModale) => {
+
+        // Création des éléments nécessaires
+        const cardModale = document.createElement("figure");
+        const imgCardModale = document.createElement("img");
+        const titleCardModale = document.createElement("figcaption");
+
+        // On récupère les données importantes pour afficher les travaux
+        cardModale.setAttribute('id', workModale.id)
+        imgCardModale.src = workModale.imageUrl;            
+        imgCardModale.alt = workModale.title;
+        imgCardModale.setAttribute('category', workModale.categoryId);
+        
+        // Ajout de l'icône de suppression d'un projet
+        const deleteButton = document.createElement('button');
+        deleteButton.type = "submit";
+        deleteButton.id= "delete"
+        deleteButton.classList.add('deleteButton');
+        deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        
+
+
+        // On relie les éléments img et title à leur parent card
+        cardModale.appendChild(imgCardModale);
+        cardModale.appendChild(titleCardModale);
+        cardModale.appendChild(deleteButton);
+        // On relie la card à la balise div qui contient la galerie
+        galleryModale.appendChild(cardModale);
+
+
+
+
+})})}
