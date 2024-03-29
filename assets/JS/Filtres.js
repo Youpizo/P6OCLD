@@ -75,16 +75,5 @@
       });
   };
 
-//RECUP DES PHOTOS POUR LA MODALE//
-async function getWorksModal() {
-    fetch("http://localhost:5678/api/works")
-    .then(response => response.json())
-    .then(dataWorksModal => {
-        // Sélection de la div qui va contenir les données récupérées via l'API
-        const galleryModal = document.querySelector(".modalePage1_gallery"); 
-        galleryModal.innerHTML = "";
-        // Création des éléments nécessaires
-        const cardModal = document.createElement("figure");
-        const imgCardModal = document.createElement("img");
-        const titleCardModal = document.createElement("figcaption");
-})}
+
+  
