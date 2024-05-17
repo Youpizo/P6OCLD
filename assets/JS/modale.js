@@ -37,7 +37,7 @@ const myHTML = `
 					</select>
 					<span id="errorForm"></span>
 					<span class="modalePage2_bar"></span>
-					<input id="validateProject" class="modPage2_validCTA" type="submit" value="Valider">
+					<input id="validateProject" class="modPage2_validCTA" type="submit" value="Valider" disabled>
 				</form>
 </div>
 `;
@@ -251,14 +251,17 @@ async function getWorksModale() {
     
     // Fonction de vérification si les conditions sont remplies = bouton "Valider" passe au vert
     function verifForm() {
-        if (titleProject.value !== "" && categoryProject.value !== "" && inputImage.value !== ""){
-            validateProject.classList.toggle("active");
+        if (titleProject.value !== "" && categoryProject.value !== "" && inputImage.files.length > 0) {
+            validateProject.disabled = false;
             errorForm.style.display = 'none';
+            validateProject.classList.toggle("active");
         } else {
+            validateProject.disabled = true;
             errorForm.innerText = "Veuillez renseigner tous les champs";
+            errorForm.style.display = 'block';
+            validateProject.classList.remove("active")
         }
-    };
-
+    }
     // Fonction pour valider le formulaire
     async function validationFormModale () {
         // Sélection des infos pour soumettre le formulaire
@@ -328,3 +331,5 @@ async function getWorksModale() {
            console.log(categoryProject.value)
         
     });
+
+   
